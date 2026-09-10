@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>E-Portfolio | Wittawat Khamsuk</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Oswald:wght@500;600;700&display=swap');
+:root{--navy:#071a38;--blue:#0e56b4;--sky:#eaf3ff;--ink:#13243e;--muted:#667792;--line:#dce6f2}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;background:#f4f7fb;color:var(--ink);font-family:Kanit,Arial,sans-serif}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;background:#071a38f2;backdrop-filter:blur(10px);display:flex;justify-content:center;gap:4px;padding:11px 12px;box-shadow:0 5px 20px #071a3820}
+nav a{color:#fff;text-decoration:none;padding:8px 11px;border-radius:18px;font-size:13px}
+nav a:hover{background:#155bb0}
+section{padding:95px max(24px,7vw) 75px}
+.wrap{max-width:1120px;margin:auto}
+.hero{min-height:100vh;background:linear-gradient(135deg,#fff 0%,#edf5ff 60%,#dbeaff 100%);display:flex;align-items:center;overflow:hidden;position:relative}
+.hero:after{content:"";position:absolute;width:700px;height:700px;border-radius:50%;right:-250px;bottom:-250px;background:#0e56b412;box-shadow:0 0 0 100px #0e56b407}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center;position:relative;z-index:2}
+.kicker,.eyebrow{color:var(--blue);font-weight:700;letter-spacing:2.5px}
+.hero h1{font-family:Oswald,Impact,sans-serif;font-size:clamp(64px,9vw,112px);line-height:.88;margin:16px 0;color:var(--navy);letter-spacing:1px}
+.hero h1 span{color:var(--blue)}
+.hero h2{font-size:30px;margin:16px 0}
+.badge{display:inline-block;padding:9px 15px;border:2px solid #a7bad5;border-radius:9px;color:#174e98;font-weight:600;background:#ffffffaa}
+.hero p{font-size:18px;line-height:1.8;max-width:650px}
+.photo-frame{position:relative}
+.photo-frame:before{content:"";position:absolute;inset:-20px 28px 20px -24px;background:linear-gradient(150deg,var(--navy),var(--blue));clip-path:polygon(16% 0,100% 0,88% 100%,0 100%);z-index:-1}
+.photo{width:100%;height:650px;object-fit:cover;object-position:center top;border-radius:8px;box-shadow:0 25px 55px #071a3830}
+.title{margin-bottom:38px}.title h2{font-size:42px;margin:6px 0}.title .bar{width:60px;height:5px;background:var(--blue)}
+.card{background:#fff;border:1px solid #e1e9f3;border-radius:20px;padding:28px;box-shadow:0 12px 35px #10264a0e}
+.preface{font-size:17px;line-height:1.9}.sign{text-align:right;margin-top:22px;font-weight:600}
+.profile-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.info-row{display:flex;justify-content:space-between;gap:20px;padding:10px 0;border-bottom:1px solid #e8eef6}.info-row:last-child{border:0}.info-row span{color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:10px}.tag{background:#edf5ff;color:#174e98;border:1px solid #cbdcf1;border-radius:999px;padding:8px 12px;font-size:14px}
+.dark{background:var(--navy);color:#fff}.dark .title h2{color:#fff}.dark .eyebrow{color:#8dc1ff}
+.edu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}.edu-card{background:#0d2a55;border:1px solid #365a89;border-radius:20px;padding:28px}.edu-card h3{color:#91c2ff}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}.stat{background:#fff;color:var(--ink);padding:20px;border-radius:16px;text-align:center}.stat b{display:block;font-size:28px;color:var(--blue)}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.item{background:#fff;border-radius:20px;overflow:hidden;border:1px solid #e0e8f2;box-shadow:0 10px 30px #10264a10}
+.item img{width:100%;height:240px;object-fit:cover;display:block}.item.cert img{height:270px;object-fit:contain;background:#f7f9fc}
+.item .body{padding:20px}.item h3{margin:0 0 8px;color:#0d4f9f}.item p{margin:0;color:#5f6f86;line-height:1.65}
+.feature{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;margin-bottom:24px}.feature img{width:100%;height:390px;object-fit:cover;border-radius:20px}.feature .card{display:flex;flex-direction:column;justify-content:center}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.contact-box{background:var(--navy);color:#fff;border-radius:20px;padding:30px}.contact-box b{color:#92c3ff}
+.note{font-size:13px;color:#74849b;margin-top:14px}
+footer{background:#05142d;color:#bfd0e8;text-align:center;padding:28px}
+@media(max-width:850px){nav{justify-content:flex-start;overflow:auto;white-space:nowrap}.hero-grid,.profile-grid,.edu-grid,.feature,.contact-grid{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}.photo{height:500px}.stats{grid-template-columns:1fr}.hero{padding-top:110px}}
+@media(max-width:560px){section{padding-left:20px;padding-right:20px}.gallery{grid-template-columns:1fr}.photo{height:430px}.title h2{font-size:34px}}
+</style>
+</head>
+<body>
+<nav>
+<a href="#home">HOME</a><a href="#preface">PREFACE</a><a href="#profile">PROFILE</a><a href="#education">EDUCATION</a><a href="#activities">ACTIVITIES</a><a href="#certificates">CERTIFICATES</a><a href="#contact">CONTACT</a>
+</nav>
+
+<section id="home" class="hero"><div class="wrap hero-grid">
+<div>
+<div class="kicker">E-PORTFOLIO • 2026</div>
+<h1>WITTAWAT<br><span>KHAMSUK</span></h1>
+<h2>วิทวัฒน์ คำสุข</h2>
+<div class="badge">คณะศึกษาศาสตร์ สาขาคอมพิวเตอร์ศึกษา</div>
+<p>FACULTY OF EDUCATION · COMPUTER EDUCATION</p>
+<p>“เทคโนโลยีเปลี่ยนแปลงโลก แต่โค้ดคือเครื่องมือที่เปลี่ยนอนาคตของเรา”</p>
+</div>
+<div class="photo-frame"><img class="photo" src="assets/profile.png" alt="Portrait"></div>
+</div></section>
+
+<section id="preface"><div class="wrap">
+<div class="title"><div class="eyebrow">01 — PREFACE</div><h2>คำนำ</h2><div class="bar"></div></div>
+<div class="card preface">
+<p>แฟ้มสะสมผลงาน (Portfolio) ฉบับนี้ จัดทำขึ้นเพื่อรวบรวมประวัติส่วนตัว ประวัติการศึกษา ความสามารถ ตลอดจนผลงานและกิจกรรมที่ผมได้เข้าร่วมตลอดช่วงการศึกษา เพื่อแสดงให้เห็นถึงความสนใจและความตั้งใจในการพัฒนาตนเองด้านคอมพิวเตอร์ เทคโนโลยี และการศึกษา</p>
+<p>ผมมีความสนใจด้านเทคโนโลยีมาอย่างต่อเนื่อง และได้พยายามเปิดโอกาสให้ตนเองเรียนรู้จากประสบการณ์นอกห้องเรียน ไม่ว่าจะเป็นการอบรมด้าน Coding และ Artificial Intelligence (AI) การเรียนรู้ Prompt Engineering การพัฒนาทักษะการเขียนโปรแกรม ตลอดจนการเข้าร่วมการแข่งขันด้าน Cybersecurity – Capture The Flag (CTF) ประสบการณ์เหล่านี้ทำให้ผมได้ฝึกการคิดอย่างเป็นระบบ การแก้ปัญหา การทำงานร่วมกับผู้อื่น และการนำความรู้ทางคอมพิวเตอร์มาประยุกต์ใช้จริง</p>
+<p>จากประสบการณ์ที่ได้รับ ผมมองว่าคอมพิวเตอร์ไม่ได้เป็นเพียงเครื่องมือสำหรับการเขียนโปรแกรม แต่สามารถเป็นเครื่องมือสำคัญในการสร้างการเรียนรู้รูปแบบใหม่ ผมจึงมีความตั้งใจที่จะศึกษาต่อในคณะศึกษาศาสตร์ สาขาคอมพิวเตอร์ศึกษา เพื่อพัฒนาความรู้ทั้งด้านเทคโนโลยีและการศึกษา และนำความรู้เหล่านั้นไปถ่ายทอดและสร้างประโยชน์ให้แก่ผู้อื่นในอนาคต</p>
+<p>ผมหวังว่าแฟ้มสะสมผลงานฉบับนี้จะสะท้อนให้เห็นถึงตัวตน ความสนใจ ความพยายาม และความพร้อมของผมในการก้าวเข้าสู่การศึกษาระดับมหาวิทยาลัย และพัฒนาตนเองบนเส้นทางด้านคอมพิวเตอร์ศึกษาต่อไป</p>
+<div class="sign">นายวิทวัฒน์ คำสุข<br>ผู้จัดทำ</div>
+</div></div></section>
+
+<section id="profile"><div class="wrap">
+<div class="title"><div class="eyebrow">02 — PROFILE</div><h2>ประวัติส่วนตัว</h2><div class="bar"></div></div>
+<div class="profile-grid">
+<div class="card">
+<h3>ข้อมูลส่วนตัว</h3>
+<div class="info-row"><span>ชื่อ-นามสกุล</span><b>นายวิทวัฒน์ คำสุข</b></div>
+<div class="info-row"><span>English Name</span><b>Wittawat Khamsuk</b></div>
+<div class="info-row"><span>ชื่อเล่น</span><b>คอปเตอร์ (Copter)</b></div>
+<div class="info-row"><span>วันเกิด</span><b>18 พฤศจิกายน 2551</b></div>
+<div class="info-row"><span>อายุ</span><b>17 ปี</b></div>
+<div class="info-row"><span>สัญชาติ / เชื้อชาติ</span><b>ไทย / ไทย</b></div>
+<div class="info-row"><span>ศาสนา</span><b>พุทธ</b></div>
+</div>
+<div class="card">
+<h3>Talents & Skills</h3>
+<p>ความสนใจและความสามารถที่สะท้อนตัวตนของผม</p>
+<div class="tags">
+<span class="tag">นวัตกรรมและเทคโนโลยี</span><span class="tag">วิทยาศาสตร์</span><span class="tag">คณิตศาสตร์</span><span class="tag">คอมพิวเตอร์</span><span class="tag">Coding</span><span class="tag">AI</span><span class="tag">Cybersecurity</span><span class="tag">การร้องเพลง</span><span class="tag">กิจกรรมนันทนาการ</span><span class="tag">Strategic Thinking</span><span class="tag">การวางแผน / การ์ดเกม</span>
+</div>
+</div></div></div></section>
+
+<section id="education" class="dark"><div class="wrap">
+<div class="title"><div class="eyebrow">03 — EDUCATION</div><h2>ประวัติการศึกษา</h2><div class="bar"></div></div>
+<div class="edu-grid">
+<div class="edu-card"><h3>ประถมศึกษา – มัธยมศึกษาตอนต้น</h3><h2>โรงเรียนเทศบาลวัดป่าเรไร</h2><p>เทศบาลเมืองร้อยเอ็ด</p></div>
+<div class="edu-card"><h3>มัธยมศึกษาตอนปลาย (ม.4 – ม.6)</h3><h2>โรงเรียนร้อยเอ็ดวิทยาลัย</h2><p>แผนการเรียน วิทยาศาสตร์ – คณิตศาสตร์ – คอมพิวเตอร์</p></div>
+</div>
+<div class="stats"><div class="stat"><b>3.13</b>GPAX</div><div class="stat"><b>Science</b>แผนการเรียน</div><div class="stat"><b>Computer</b>ความสนใจหลัก</div></div>
+</div></section>
+
+<section id="activities"><div class="wrap">
+<div class="title"><div class="eyebrow">04 — ACTIVITIES</div><h2>กิจกรรมและประสบการณ์</h2><div class="bar"></div></div>
+<div class="feature">
+<img src="assets/coding_group.png" alt="Coding Thailand">
+<div class="card"><h3>Coding Thailand 2025: AI-Driven Future</h3><p>เข้าร่วมกิจกรรม Coding & AI – Acceleration และกิจกรรมเชิงปฏิบัติการด้านเทคโนโลยี ได้ฝึกการทำงานร่วมกัน การประยุกต์ใช้คอมพิวเตอร์ และการแก้ปัญหาจากสถานการณ์จริง</p></div>
+</div>
+<div class="gallery">
+<div class="item"><img src="assets/robotics1.png"><div class="body"><h3>Technology Workshop</h3><p>ฝึกใช้อุปกรณ์และคอมพิวเตอร์ร่วมกับทีม เพื่อพัฒนาทักษะการคิดวิเคราะห์และการทำงานเชิงระบบ</p></div></div>
+<div class="item"><img src="assets/robotics2.png"><div class="body"><h3>Hands-on Learning</h3><p>เรียนรู้จากการลงมือปฏิบัติจริง ทดลอง เชื่อมต่ออุปกรณ์ และร่วมกันแก้ปัญหา</p></div></div>
+<div class="item"><img src="assets/presentation.png"><div class="body"><h3>Presentation & Teamwork</h3><p>ฝึกการสื่อสาร การนำเสนอ และการทำงานร่วมกับผู้อื่นในกิจกรรมด้านเทคโนโลยี</p></div></div>
+<div class="item"><img src="assets/science_week.png"><div class="body"><h3>KKU Science Week 2026</h3><p>เข้าร่วมกิจกรรมสัปดาห์วิทยาศาสตร์แห่งชาติ ส่วนภูมิภาค ณ มหาวิทยาลัยขอนแก่น</p></div></div>
+</div>
+</div></section>
+
+<section id="certificates"><div class="wrap">
+<div class="title"><div class="eyebrow">05 — CERTIFICATES</div><h2>เกียรติบัตรและการพัฒนาตนเอง</h2><div class="bar"></div></div>
+<div class="gallery">
+<div class="item cert"><img src="assets/ctf_cert.png"><div class="body"><h3>Capture The Flag (CTF)</h3><p>เข้าร่วมการแข่งขันทักษะความมั่นคงปลอดภัยไซเบอร์ ระดับมัธยมศึกษาตอนปลาย ในงาน 4th Computing Fair 2026 วิทยาลัยการคอมพิวเตอร์ มหาวิทยาลัยขอนแก่น</p></div></div>
+<div class="item cert"><img src="assets/prompt.png"><div class="body"><h3>Prompt Engineering</h3><p>อบรม “Prompt Engineering : สั่งงาน AI อย่างมือโปร” เพื่อพัฒนาความเข้าใจการใช้งาน AI อย่างมีประสิทธิภาพ</p></div></div>
+<div class="item cert"><img src="assets/programming.png"><div class="body"><h3>Computer Programming</h3><p>ผ่านการอบรมเชิงปฏิบัติการ การพัฒนาทักษะทางโปรแกรมคอมพิวเตอร์สำหรับนักเรียน</p></div></div>
+<div class="item cert"><img src="assets/modern_tech.png"><div class="body"><h3>Modern Technology</h3><p>ผ่านการอบรมเชิงปฏิบัติการ การพัฒนาทักษะทางเทคโนโลยีสมัยใหม่</p></div></div>
+<div class="item cert"><img src="assets/digital_literacy.png"><div class="body"><h3>Digital Literacy & Design</h3><p>อบรมด้าน Digital Literacy และการออกแบบสำหรับนักเรียน เพื่อพัฒนาทักษะดิจิทัลและการคิดสร้างสรรค์</p></div></div>
+<div class="item cert"><img src="assets/coding_ai_cert.png"><div class="body"><h3>Coding & AI – Acceleration</h3><p>เข้าร่วมอบรมภายใต้โครงการ Coding Thailand 2025: AI-Driven Future โดยสำนักงานส่งเสริมเศรษฐกิจดิจิทัล</p></div></div>
+<div class="item cert"><img src="assets/manners.png"><div class="body"><h3>นักเรียนมารยาทดี</h3><p>ได้รับคัดเลือกเป็นนักเรียนมารยาทดี สะท้อนความรับผิดชอบ วินัย และการปฏิบัติตนที่เหมาะสมในโรงเรียน</p></div></div>
+</div></div></section>
+
+<section id="contact"><div class="wrap">
+<div class="title"><div class="eyebrow">06 — CONTACT</div><h2>ช่องทางการติดต่อ</h2><div class="bar"></div></div>
+<div class="contact-grid">
+<div class="contact-box"><h2>Wittawat Khamsuk</h2><p><b>โทรศัพท์</b><br>092-470-9228</p><p><b>อีเมล</b><br>siriwarinpop@gmail.com</p><p><b>Facebook</b><br>CoPy TeRy</p></div>
+<div class="card"><h3>ที่อยู่</h3><p>97 หมู่ 14 ตำบลขอนแก่น<br>อำเภอเมืองร้อยเอ็ด จังหวัดร้อยเอ็ด 45000</p><p class="note">หมายเหตุ: หากนำเว็บไซต์นี้เผยแพร่สู่สาธารณะ แนะนำให้ซ่อนที่อยู่เต็มและเบอร์โทรศัพท์เพื่อความเป็นส่วนตัว</p></div>
+</div></div></section>
+
+<footer>WITTAWAT KHAMSUK · E-PORTFOLIO 2026</footer>
+</body></html>
